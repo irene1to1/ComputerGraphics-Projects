@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSE160-assignment 1:Painting</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <input id="clear-button" type="button" value="Clear Canvas">
+    </p>
+    <hr>Drawing Mode:</hr>
+    <p>
+      <button type="button" id="square">Squares</button>
+      <button type="button" id="triangle">Triangles</button>
+      <button type="button" id="circle">Circles</button>
+    </p>
+    <hr>Shape Color:</hr>
+    <div>
+      <label for="red">Red</label>
+      <input type="range" id="red" name="red" min="0" max="255" value="255">
+       <label for="green">Green</label>
+      <input type="range" id="green" name="green" min="0" max="255" value="255">
+       <label for="blue">Blue</label>
+      <input type="range" id="blue" name="blue" min="0" max="255" value="255">
+    </div>
+    <hr>Palette:</hr>
+    <input type="color" id="palette" aria-label="Palette">
+    <p>
+      <label for="size">Shape Size:</label>
+      <input type="range" id="size" name="size" min="2" max="200"><span class="output">30</span>
+    </p>
+    <p>
+      <label for="count">(Circles) Segment Count:</label>
+      <input type="range" id="count" name="count" min="6" max="40" step="2" value="30">
+    </p>
+    <hr>Canvas Color:</hr>
+    <input type="color" id="canvas_color" aria-label="canvas">
+    <p>
+    </p>
+    Things that I <i>added</i>:
+    <li> Square button</li>
+    <li> Palette</li>
+    <li> Canvas Color</li>
+
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+    <script src="./src/driver.js"></script>
+  </body>
+</html>
